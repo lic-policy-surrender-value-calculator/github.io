@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LIC Surrender Value Calculator - Free Online Tool 2025</title>
-<meta name="description" content="Calculate the surrender value of your LIC policy instantly with our free online calculator. Get accurate estimates based on policy type, premiums paid, and surrender value factors. Understand GSV, SSV, and make informed decisions.">
-<meta name="keywords" content="LIC surrender value calculator, LIC policy surrender calculator online, LIC Jeevan Anand surrender value, LIC surrender value after 3 years, GSV calculator, Special Surrender Value">
+<meta name="description" content="Calculate the surrender value of your LIC policy instantly with our advanced calculator. Get accurate GSV and SSV estimates based on policy type, premiums paid, and surrender value factors. Understand all your options before surrendering.">
+<meta name="keywords" content="LIC surrender value calculator, LIC policy surrender calculator online, LIC Jeevan Anand surrender value, LIC surrender value after 3 years, GSV calculator, Special Surrender Value, LIC calculator">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://licsurrendervaluecalculator.github.io/">
+<link rel="canonical" href="https://lic-policy-surrender-value-calculator.github.io/">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGFBJ597ZK"></script>
@@ -19,388 +19,843 @@ gtag('config', 'G-HGFBJ597ZK');
 </script>
 <meta name="google-site-verification" content="8QnPH5KvZ_eDz_BAlmmtd6vFEAMB6ZC08cmZnJ50qpM" />
 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
   color: #333;
-  background: #f7f9fc;
-  padding-bottom: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 10px;
+  min-height: 100vh;
 }
+
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 18px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .navbar-brand {
-  color: #fff;
+  color: #1e3a8a;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  display: inline-block;
 }
-.container {
-  max-width: 1140px;
+
+/* Calculator Section */
+.lic-surrender-calc {
+  max-width: 950px;
+  margin: 0 auto 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 45px 40px;
+}
+
+.calc-header {
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #e5e7eb;
+}
+
+.calc-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: #1e3a8a;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.calc-description {
+  font-size: 15.5px;
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 20px;
 }
-.calculator {
-  background: #fff;
-  border-radius: 12px;
-  padding: 32px;
-  margin: 30px auto;
-  max-width: 600px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 28px;
 }
-.calculator h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #444;
-  font-weight: 600;
+
+.form-group-full {
+  grid-column: 1 / -1;
 }
-.calculator input, .calculator select {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  margin-bottom: 18px;
-  transition: border 0.2s;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
-.calculator input:focus, .calculator select:focus {
-  outline: none;
-  border-color: #667eea;
-}
-#submit_button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-#submit_button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(102,126,234,0.4);
-}
-#resultContainer {
-  margin-top: 24px;
-  padding: 20px;
-  background: #f0fdf4;
-  border-left: 4px solid #10b981;
-  border-radius: 8px;
-}
-#result {
-  color: #047857;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0;
-}
-.content {
-  background: #fff;
-  border-radius: 12px;
-  padding: 32px;
-  margin: 30px auto;
-  max-width: 900px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-}
-.content h1 {
-  font-size: 32px;
-  margin-bottom: 16px;
-  color: #1f2937;
-  line-height: 1.3;
-}
-.content h2 {
-  font-size: 24px;
-  margin-top: 32px;
-  margin-bottom: 12px;
+
+.form-label {
+  font-size: 14px;
+  font-weight: 700;
   color: #374151;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 8px;
+  margin-bottom: 9px;
+  letter-spacing: 0.2px;
 }
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  background: #ffffff;
+  transition: all 0.25s ease;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
+  transform: translateY(-1px);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+.input-currency {
+  position: relative;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: 700;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.input-currency .form-input {
+  padding-left: 36px;
+}
+
+.input-note {
+  font-size: 12.5px;
+  color: #6b7280;
+  margin-top: 7px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 6px;
+  display: block;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(30, 58, 138, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* Result Area */
+.result-area {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 3px solid #16a34a;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+  display: none;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-header {
+  font-size: 22px;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 22px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 2px solid #bbf7d0;
+  transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+  transform: translateX(4px);
+}
+
+.result-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.result-data {
+  font-size: 17px;
+  font-weight: 800;
+  color: #15803d;
+}
+
+.result-final {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  border: none;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.4);
+}
+
+.result-final .result-label,
+.result-final .result-data {
+  color: #ffffff;
+}
+
+.result-final .result-data {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.result-disclaimer {
+  font-size: 12.5px;
+  color: #15803d;
+  margin-top: 14px;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Info Sections */
+.info-section {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+  display: none;
+  border: 2px solid #e5e7eb;
+}
+
+.info-section h3 {
+  font-size: 21px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
+
+.info-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.info-section p,
+.info-section li {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.info-section ol {
+  padding-left: 22px;
+  margin-top: 12px;
+}
+
+.info-section li {
+  margin-bottom: 12px;
+}
+
+.alternative-item {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
+
+.alternative-item:hover {
+  border-color: #1e3a8a;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+  transform: translateX(6px);
+}
+
+.alternative-item h4 {
+  margin-bottom: 8px;
+}
+
+/* Disclaimer Box */
+.disclaimer {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 5px solid #f59e0b;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.8;
+  margin-top: 28px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.disclaimer strong {
+  color: #78350f;
+  font-weight: 700;
+}
+
+.disclaimer ul {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+.disclaimer li {
+  margin-bottom: 10px;
+}
+
+/* Content Section */
+.content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 950px;
+  margin: 0 auto 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content h1 {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #1e3a8a;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.content h2 {
+  font-size: 26px;
+  margin-top: 35px;
+  margin-bottom: 14px;
+  color: #374151;
+  border-bottom: 3px solid #e5e7eb;
+  padding-bottom: 10px;
+  font-weight: 800;
+}
+
 .content h3 {
   font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 12px;
   color: #4b5563;
+  font-weight: 700;
 }
+
 .content p {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: #4b5563;
+  line-height: 1.8;
 }
-.content ul, .content ol {
-  margin-left: 24px;
-  margin-bottom: 16px;
+
+.content ul,
+.content ol {
+  margin-left: 26px;
+  margin-bottom: 18px;
 }
+
 .content li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #4b5563;
+  line-height: 1.7;
 }
+
 .content blockquote {
-  background: #fef3c7;
-  border-left: 4px solid #f59e0b;
-  padding: 16px 20px;
-  margin: 20px 0;
-  border-radius: 6px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 5px solid #f59e0b;
+  padding: 18px 22px;
+  margin: 22px 0;
+  border-radius: 8px;
+  font-style: italic;
 }
+
 .content blockquote strong {
   color: #92400e;
+  font-weight: 700;
 }
+
+.disclaimer-box {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-left: 5px solid #ef4444;
+  padding: 22px;
+  border-radius: 10px;
+  margin: 26px 0;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.12);
+}
+
+.disclaimer-box strong {
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.disclaimer-box p {
+  color: #7f1d1d;
+}
+
+.external-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e40af;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 2px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.external-link:hover {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Support Box */
 .support-box {
   background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 16px;
+  padding: 28px;
   text-align: center;
-  margin: 30px auto;
-  max-width: 700px;
+  max-width: 750px;
+  margin: 35px auto;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+  border: 2px solid #f59e0b;
 }
+
 .support-box p {
   font-size: 17px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #78350f;
-  font-weight: 500;
+  font-weight: 600;
 }
+
 .bmc-btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-size: 16px;
   background: linear-gradient(180deg, #FFDD57, #FFB347);
   color: #111;
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-weight: 700;
 }
+
 .bmc-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
 }
+
+/* Floating Button */
 .floating-bmc {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
+  right: 20px;
+  bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: #e63946;
   color: #fff;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   z-index: 10000;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  transition: all 0.3s ease;
 }
+
 .floating-bmc:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
   background: #d62828;
 }
+
 .floating-bmc svg {
   display: block;
 }
+
 .floating-bmc span {
   font-size: 15px;
 }
-@media (max-width: 420px) {
-  .floating-bmc span {
-    display: none;
-  }
-}
+
+/* Footer */
 footer {
-  background: #f9fafb;
-  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 28px 24px;
   text-align: center;
-  border-top: 1px solid #e5e7eb;
-  margin-top: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
+
 footer ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
+
 footer ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 18px;
 }
+
 footer a {
   color: #6b7280;
   text-decoration: none;
-  transition: color 0.2s;
-}
-footer a:hover {
-  color: #667eea;
-}
-.disclaimer-box {
-  background: #fef2f2;
-  border-left: 4px solid #ef4444;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 24px 0;
-}
-.disclaimer-box strong {
-  color: #991b1b;
-}
-.external-link {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 18px;
-  background: #eff6ff;
-  color: #1e40af;
-  text-decoration: none;
-  border-radius: 6px;
+  transition: color 0.3s;
   font-weight: 600;
-  border: 1.5px solid #3b82f6;
-  transition: background 0.2s, transform 0.2s;
 }
-.external-link:hover {
-  background: #dbeafe;
-  transform: translateX(4px);
+
+footer a:hover {
+  color: #1e3a8a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 15px 8px;
+  }
+
+  .lic-surrender-calc,
+  .content {
+    padding: 28px 22px;
+    margin: 0 0 25px;
+    border-radius: 14px;
+  }
+
+  .calc-title {
+    font-size: 28px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .result-final .result-data {
+    font-size: 22px;
+  }
+
+  .floating-bmc span {
+    display: none;
+  }
+
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .navbar-brand {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 420px) {
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .calc-title {
+    font-size: 24px;
+  }
 }
 </style>
 </head>
 <body>
 
 <nav class="navbar">
-  <a class="navbar-brand" href="#">LIC Surrender Value Calculator</a>
+  <a class="navbar-brand" href="#">🏦 LIC Surrender Value Calculator</a>
 </nav>
 
 <!-- Calculator Section -->
-<div class="calculator">
-  <form name="ageCalculatorForm" onsubmit="calculateSurrenderValue(event)">
-    <h4>Select LIC Policy (Optional)</h4>
-    <select id="policyType" name="policy_type">
-      <option value="">-- Select Policy --</option>
-      <option value="LIC's Bima Jyoti">LIC's Bima Jyoti</option>
-      <option value="LIC's Bima Ratna">LIC's Bima Ratna</option>
-      <option value="LIC's Dhan Sanchay">LIC's Dhan Sanchay</option>
-      <option value="LIC's Jeevan Azad">LIC's Jeevan Azad</option>
-      <option value="LIC's Dhan Vriddhi">LIC's Dhan Vriddhi</option>
-      <option value="LIC's Single Premium Endowment Plan">LIC's Single Premium Endowment Plan</option>
-      <option value="LIC's Jeevan Lakshya">LIC's Jeevan Lakshya</option>
-      <option value="LIC's Jeevan Labh">LIC's Jeevan Labh</option>
-      <option value="LIC's Aadhar Stambh">LIC's Aadhar Stambh</option>
-      <option value="LIC's Aadhar Shila">LIC's Aadhar Shila</option>
-      <option value="LIC's New Endowment Plan">LIC's New Endowment Plan (With Profits)</option>
-      <option value="LIC's New Jeevan Anand">LIC's New Jeevan Anand</option>
-      <option value="LIC's Jeevan Rakshak">LIC's Jeevan Rakshak</option>
-    </select>
+<div class="lic-surrender-calc">
+  <div class="calc-header">
+    <h2 class="calc-title">LIC Policy Surrender Value Calculator</h2>
+    <p class="calc-description">Calculate the estimated surrender value of your LIC policy instantly. Get both Guaranteed Surrender Value (GSV) and approximate payout details with our advanced calculator.</p>
+  </div>
 
-    <h4>Premium Paid Years (Number of full years)</h4>
-    <input id="premiumPaidYears" type="number" name="premium_paid_years" required min="1" placeholder="e.g. 5">
+  <form id="licSurrenderForm" onsubmit="return false;">
+    <div class="form-grid">
+      <div class="form-group form-group-full">
+        <label class="form-label">📋 Select Your LIC Policy</label>
+        <select class="form-select" id="policyName" required>
+          <option value="" disabled selected>-- Choose Your Policy --</option>
+          <optgroup label="🔹 Popular Active Plans">
+            <option value="768">LIC's Jeevan Azad (768)</option>
+            <option value="717">Single Premium Endowment (717)</option>
+            <option value="714">New Endowment Plan (714)</option>
+            <option value="715">New Jeevan Anand (715)</option>
+            <option value="733">Jeevan Lakshya (733)</option>
+            <option value="736">Jeevan Labh (736)</option>
+            <option value="774">Amritbaal (774)</option>
+            <option value="760">Bima Jyoti (760)</option>
+            <option value="745">Jeevan Umang (745)</option>
+            <option value="771">Jeevan Utsav (771)</option>
+            <option value="748">Bima Shree (748)</option>
+            <option value="720">Money Back Plan - 20 Years (720)</option>
+            <option value="721">Money Back Plan - 25 Years (721)</option>
+            <option value="732">Children's Money Back (732)</option>
+            <option value="764">Bima Ratna (764)</option>
+          </optgroup>
+          <optgroup label="📦 Discontinued / Older Plans">
+            <option value="149">Jeevan Anand (149 - Old)</option>
+            <option value="165">Jeevan Saral (165)</option>
+            <option value="944">Aadhar Shila (944)</option>
+            <option value="943">Aadhar Stambh (943)</option>
+            <option value="853">Nav Jeevan (853)</option>
+            <option value="851">Micro Bachat (851)</option>
+          </optgroup>
+        </select>
+      </div>
 
-    <h4>Monthly Premium Amount (₹)</h4>
-    <input id="monthlyPremium" type="number" name="monthly_premium" required min="1" placeholder="e.g. 2500">
+      <div class="form-group">
+        <label class="form-label">💰 Sum Assured (₹)</label>
+        <div class="input-currency">
+          <span class="currency-symbol">₹</span>
+          <input type="number" class="form-input" id="sumAssured" placeholder="200000" min="1" required>
+        </div>
+        <span class="input-note">Total coverage amount of your policy</span>
+      </div>
 
-    <input id="submit_button" type="submit" value="Calculate Surrender Value">
+      <div class="form-group">
+        <label class="form-label">📅 Policy Term (Years)</label>
+        <input type="number" class="form-input" id="policyTerm" placeholder="20" min="1" max="50" required>
+        <span class="input-note" id="pptNote">Premium Paying Term assumed same as Policy Term (<span id="pptYears">20</span> years)</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">🔄 Premium Payment Mode</label>
+        <select class="form-select" id="premiumFrequency" required>
+          <option value="" disabled selected>-- Select Mode --</option>
+          <option value="annual">Annual (Yearly)</option>
+          <option value="semi-annual">Semi-Annual (Half-Yearly)</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="monthly">Monthly</option>
+          <option value="single">Single Premium (One-Time)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" id="premiumLabel">💵 Annual Premium Amount (₹)</label>
+        <div class="input-currency">
+          <span class="currency-symbol">₹</span>
+          <input type="number" class="form-input" id="annualPremium" placeholder="25000" min="1" required>
+        </div>
+        <span class="input-note" id="premiumNote">Enter the total premium amount paid per year</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" id="yearsPaidLabel">⏱️ Number of Full Premiums Paid (Years)</label>
+        <input type="number" class="form-input" id="yearsPaid" placeholder="4" min="1" required>
+        <span class="input-note" id="yearsPaidNote">How many full years' premiums have you paid?</span>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button type="button" class="btn btn-primary" onclick="calculateLICSurrender()">🧮 Calculate Surrender Value</button>
+      <button type="reset" class="btn btn-secondary" onclick="resetLICSurrender()">🔄 Reset</button>
+      <button type="button" class="btn btn-secondary" onclick="shareLICSurrender()">📤 Share</button>
+    </div>
+
+    <div class="result-area" id="resultArea">
+      <h3 class="result-header">📊 Calculation Summary</h3>
+      <div class="result-details">
+        <div class="result-item">
+          <span class="result-label">Total Premiums Paid:</span>
+          <span class="result-data" id="totalPremiums">₹1,00,000</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Assumed Premium Paying Term (PPT):</span>
+          <span class="result-data" id="pptDisplay">20 Years</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Estimated Surrender Factor (Years Paid / PPT):</span>
+          <span class="result-data" id="svFactor">0.20</span>
+        </div>
+        <div class="result-item result-final">
+          <span class="result-label">💎 Estimated Guaranteed Surrender Value (GSV):</span>
+          <span class="result-data" id="gsvValue">₹20,000</span>
+        </div>
+      </div>
+      <p class="result-disclaimer" id="resultNote">This GSV estimate is based only on premiums paid and assumed PPT.</p>
+    </div>
   </form>
 
-  <div id="resultContainer" style="display: none;">
-    <h2 id="result"></h2>
+  <div class="info-section" id="gsvExplanation">
+    <h4>💡 Understanding Your Estimate:</h4>
+    <div class="disclaimer">
+      <strong>Note:</strong> The value shown above is only an <em>estimate</em> of the <strong>Guaranteed Surrender Value (GSV)</strong>, based on the total premiums paid and the assumed policy term.<br><br>
+      
+      LIC may also calculate a <strong>Special Surrender Value (SSV)</strong>, which includes any bonuses your policy may have earned — such as <em>Reversionary Bonus</em> or <em>Terminal Bonus</em>.<br><br>
+      
+      👉 This calculator does <strong>not</strong> include bonuses or estimate the SSV.<br><br>
+      
+      When you surrender a policy, LIC usually pays <strong>whichever is higher</strong> — the GSV or the SSV. In many cases, especially after several years of premium payments, the SSV can be <strong>much higher</strong> than the GSV due to these bonuses.
+    </div>
+  </div>
+
+  <div class="info-section" id="alternativesSection">
+    <h3>🔄 Alternatives to Surrendering</h3>
+    <div class="alternative-item">
+      <h4>💰 Policy Loan</h4>
+      <p>Instead of surrendering, check if you can take a loan against your policy's value. Often, up to 80-90% of the surrender value is available as a loan, allowing your policy (and risk cover) to continue.</p>
+    </div>
+    <div class="alternative-item">
+      <h4>📋 Make Policy Paid-Up</h4>
+      <p>Another option might be to convert your policy to 'Paid-Up' status (if eligible). You stop paying premiums, and the Sum Assured is reduced proportionally. The reduced cover continues until maturity or claim.</p>
+    </div>
+    <div class="alternative-item">
+      <h4>💳 Revival Option</h4>
+      <p>If your policy has lapsed due to non-payment, consider reviving it instead of surrendering. LIC allows revival within a certain period (usually 2-5 years) by paying pending premiums with interest.</p>
+    </div>
+  </div>
+
+  <div class="info-section" id="nextSteps">
+    <h3>📋 Important Next Steps</h3>
+    <ol>
+      <li><strong>Verify with LIC:</strong> This calculator provides an estimate only. For the exact, current surrender value (GSV & SSV), please contact your LIC agent, visit the nearest LIC branch, or check the official LIC customer portal.</li>
+      <li><strong>Consult Policy Document:</strong> Refer to your original policy document for specific terms, conditions, and rules regarding surrender, loans, and paid-up values applicable to your plan.</li>
+      <li><strong>Evaluate Alternatives:</strong> Carefully consider if taking a loan or making the policy paid-up is a better option for you than surrendering and losing the life cover completely.</li>
+      <li><strong>Understand Implications:</strong> Remember that surrendering the policy terminates the life insurance cover and any future benefits associated with it.</li>
+      <li><strong>Tax Implications:</strong> Consult a tax advisor to understand any potential tax implications of surrendering your policy, especially if held for less than 5 years.</li>
+    </ol>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠️ Disclaimer:</strong> This calculator assumes that the Premium Paying Term (PPT) is equal to the Policy Term — unless it's a Single Premium policy, in which case the PPT is considered as 1. Based on this assumption and the total premiums paid, it provides an estimated Guaranteed Surrender Value (GSV).<br><br>
+    
+    <strong>Please note:</strong>
+    <ul>
+      <li>The actual surrender value can vary depending on your specific policy's terms — especially if it's a Limited PPT policy.</li>
+      <li>This estimate does <strong>not include</strong> any accrued bonuses. These bonuses, if applicable, can significantly increase the Special Surrender Value (SSV).</li>
+      <li>Most policies become eligible for surrender value only after 2 or 3 full years of premium payments — except for Single Premium policies, which may acquire value earlier.</li>
+      <li><strong>Term insurance plans</strong> usually do not offer any surrender value as they are pure protection plans.</li>
+    </ul>
+    
+    <p>👉 For the most accurate information, always refer to your policy document or get in touch with LIC directly through their official channels.</p>
   </div>
 </div>
 
-<script>
-function calculateSurrenderValue(event) {
-  event.preventDefault();
-  
-  var premiumPaidYears = parseFloat(document.getElementById('premiumPaidYears').value) || 0;
-  var monthlyPremium = parseFloat(document.getElementById('monthlyPremium').value) || 0;
-  
-  var annualPremium = monthlyPremium * 12;
-  var totalPremiumPaid = premiumPaidYears * annualPremium;
-  var tax = totalPremiumPaid * 0.045;
-  
-  var resultValue = totalPremiumPaid - annualPremium - tax;
-  
-  if (premiumPaidYears === 1) {
-    resultValue *= 0.00;
-  } else if (premiumPaidYears === 2) {
-    resultValue *= 0.30;
-  } else if (premiumPaidYears === 3) {
-    resultValue *= 0.35;
-  } else if (premiumPaidYears >= 4 && premiumPaidYears <= 7) {
-    resultValue *= 0.50;
-  } else if (premiumPaidYears === 8) {
-    resultValue *= 0.5148;
-  } else if (premiumPaidYears === 9) {
-    resultValue *= 0.5296;
-  } else if (premiumPaidYears === 10) {
-    resultValue *= 0.5444;
-  } else if (premiumPaidYears === 11) {
-    resultValue *= 0.5593;
-  } else if (premiumPaidYears === 12) {
-    resultValue *= 0.5741;
-  } else if (premiumPaidYears === 13) {
-    resultValue *= 0.5889;
-  } else if (premiumPaidYears === 14) {
-    resultValue *= 0.6037;
-  } else if (premiumPaidYears === 15) {
-    resultValue *= 0.6185;
-  } else if (premiumPaidYears === 16) {
-    resultValue *= 0.6333;
-  } else if (premiumPaidYears === 17) {
-    resultValue *= 0.6481;
-  } else if (premiumPaidYears === 18) {
-    resultValue *= 0.6630;
-  } else if (premiumPaidYears === 19) {
-    resultValue *= 0.6778;
-  } else if (premiumPaidYears === 20) {
-    resultValue *= 0.6926;
-  } else if (premiumPaidYears === 21) {
-    resultValue *= 0.7074;
-  } else if (premiumPaidYears === 22) {
-    resultValue *= 0.7222;
-  } else if (premiumPaidYears === 23) {
-    resultValue *= 0.7370;
-  } else if (premiumPaidYears === 24) {
-    resultValue *= 0.7519;
-  } else if (premiumPaidYears === 25) {
-    resultValue *= 0.7667;
-  } else if (premiumPaidYears === 26) {
-    resultValue *= 0.7815;
-  } else if (premiumPaidYears === 27) {
-    resultValue *= 0.7963;
-  } else if (premiumPaidYears === 28) {
-    resultValue *= 0.8111;
-  } else if (premiumPaidYears === 29) {
-    resultValue *= 0.8259;
-  } else if (premiumPaidYears === 30) {
-    resultValue *= 0.8407;
-  } else if (premiumPaidYears === 31) {
-    resultValue *= 0.8556;
-  } else if (premiumPaidYears === 32) {
-    resultValue *= 0.8704;
-  } else if (premiumPaidYears === 33) {
-    resultValue *= 0.8852;
-  } else if (premiumPaidYears === 34) {
-    resultValue *= 0.9000;
-  } else if (premiumPaidYears >= 35) {
-    resultValue *= 0.9000;
-  }
-  
-  var resultElement = document.getElementById('result');
-  resultElement.innerHTML = 'Approximate Surrender Value: <span style="color:#047857;font-size:26px;">₹' + resultValue.toFixed(2) + '</span>';
-  
-  document.getElementById('resultContainer').style.display = 'block';
-  document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-</script>
-
 <!-- Support Section -->
 <div class="support-box">
-  <p>Please support me to keep this tool free and ad-free, and help fund new projects!</p>
-  <a href="https://calculatordekho.com/" target="_blank" rel="noopener noreferrer" class="bmc-btn">
-    ☕ Support Me on Buy Me a Coffee
+  <p>☕ Support this free tool and help fund new projects!</p>
+  <a href="https://buymeacoffee.com/moneytechs/?utm_source=website&utm_medium=support_button" target="_blank" rel="noopener noreferrer" class="bmc-btn">
+    ☕ Buy Me a Coffee
   </a>
 </div>
 
@@ -408,40 +863,40 @@ function calculateSurrenderValue(event) {
 <div class="content">
   <h1>LIC Surrender Value Calculator: Complete Guide 2025</h1>
   
-  <p>Life Insurance Corporation of India (LIC) has been one of the most trusted names for life insurance and long-term savings in India for decades [web:8][web:13]. However, life is full of uncertainties, and there may come a time when you need to exit your policy before it matures due to financial difficulties, changing priorities, or emergencies. In such situations, understanding your <strong>LIC surrender value</strong> becomes absolutely crucial.</p>
+  <p>Life Insurance Corporation of India (LIC) has been one of the most trusted names for life insurance and long-term savings in India for decades. However, life is full of uncertainties, and there may come a time when you need to exit your policy before it matures due to financial difficulties, changing priorities, or emergencies. In such situations, understanding your <strong>LIC surrender value</strong> becomes absolutely crucial.</p>
   
-  <p>This comprehensive guide explains everything you need to know about LIC surrender value—how it is calculated, what factors affect it, the types of surrender values, and what you should consider before making a decision [web:3][web:8].</p>
+  <p>This comprehensive guide explains everything you need to know about LIC surrender value—how it is calculated, what factors affect it, the types of surrender values, and what you should consider before making a decision.</p>
 
   <div class="disclaimer-box">
-    <p><strong>Important Disclaimer:</strong> This calculator is an <strong>unofficial educational tool</strong> designed to help you estimate your LIC policy's surrender value. It is not affiliated with LIC of India, IRDAI, or any government entity. Actual surrender values are calculated by LIC based on your specific policy terms and conditions. Always verify the final amount with your nearest LIC branch or official portal before making any financial decision [web:3][web:8][web:13].</p>
+    <p><strong>⚠️ Important Disclaimer:</strong> This calculator is an <strong>unofficial educational tool</strong> designed to help you estimate your LIC policy's surrender value. It is not affiliated with LIC of India, IRDAI, or any government entity. Actual surrender values are calculated by LIC based on your specific policy terms and conditions. Always verify the final amount with your nearest LIC branch or official portal before making any financial decision.</p>
   </div>
 
   <h2>What is LIC Surrender Value?</h2>
-  <p>The <strong>surrender value</strong> of a LIC policy is the amount you receive if you choose to terminate or "surrender" your policy before it reaches its maturity date [web:3][web:8]. Unlike letting the policy run until maturity, surrendering gives you only a portion of the premiums paid, adjusted by surrender value factors and accrued bonuses (if applicable).</p>
+  <p>The <strong>surrender value</strong> of a LIC policy is the amount you receive if you choose to terminate or "surrender" your policy before it reaches its maturity date. Unlike letting the policy run until maturity, surrendering gives you only a portion of the premiums paid, adjusted by surrender value factors and accrued bonuses (if applicable).</p>
   
-  <p>Most LIC policies are designed for long-term wealth creation and insurance protection, so surrendering early typically results in a lower payout compared to continuing the policy until maturity [web:5][web:7][web:13].</p>
+  <p>Most LIC policies are designed for long-term wealth creation and insurance protection, so surrendering early typically results in a lower payout compared to continuing the policy until maturity.</p>
 
   <h2>Types of Surrender Values</h2>
   
-  <h3>Guaranteed Surrender Value (GSV)</h3>
-  <p>The Guaranteed Surrender Value is the <strong>minimum amount</strong> that LIC is legally obligated to pay when you surrender your policy after the minimum eligibility period (usually 2 or 3 years, depending on the policy term) [web:5][web:8][web:13]. It is calculated as a fixed percentage of the total premiums paid, excluding the first year's premium, extra premiums for riders, and any taxes.</p>
+  <h3>1. Guaranteed Surrender Value (GSV)</h3>
+  <p>The Guaranteed Surrender Value is the <strong>minimum amount</strong> that LIC is legally obligated to pay when you surrender your policy after the minimum eligibility period (usually 2 or 3 years, depending on the policy term). It is calculated as a fixed percentage of the total premiums paid, excluding the first year's premium, extra premiums for riders, and any taxes.</p>
   
-  <p>The GSV percentage increases as the policy duration increases. For example, policies surrendered after 3 years may have a GSV factor of 30%, while policies held longer may have factors of 50% or more [web:3][web:8].</p>
+  <p>The GSV percentage increases as the policy duration increases. For example, policies surrendered after 3 years may have a GSV factor of 30%, while policies held longer may have factors of 50% or more.</p>
 
-  <h3>Special Surrender Value (SSV)</h3>
-  <p>Special Surrender Value is typically <strong>higher than GSV</strong> and is calculated based on multiple factors such as the sum assured, paid-up value, policy duration, accrued bonuses, and LIC's current valuation rates [web:2][web:3][web:13]. LIC compares both GSV and SSV and pays whichever is higher at the time of surrender.</p>
+  <h3>2. Special Surrender Value (SSV)</h3>
+  <p>Special Surrender Value is typically <strong>higher than GSV</strong> and is calculated based on multiple factors such as the sum assured, paid-up value, policy duration, accrued bonuses, and LIC's current valuation rates. LIC compares both GSV and SSV and pays whichever is higher at the time of surrender.</p>
 
   <h2>How is LIC Surrender Value Calculated?</h2>
-  <p>While the exact formula varies by policy type, a commonly used formula for traditional participating plans is [web:2][web:6][web:8]:</p>
+  <p>While the exact formula varies by policy type, a commonly used formula for traditional participating plans is:</p>
   
   <blockquote>
     <strong>Surrender Value = (Total Premiums Paid – First Year Premium) × Surrender Value Factor + Surrender Value of Bonuses</strong>
   </blockquote>
 
-  <p>The <strong>Surrender Value Factor</strong> is a percentage defined by LIC for each policy and increases with the number of years completed. The surrender value of bonuses depends on the accrued bonuses and the policy's specific terms [web:2][web:3][web:8].</p>
+  <p>The <strong>Surrender Value Factor</strong> is a percentage defined by LIC for each policy and increases with the number of years completed. The surrender value of bonuses depends on the accrued bonuses and the policy's specific terms.</p>
 
   <h3>Illustrative Example</h3>
-  <p>Suppose you have a LIC policy with an annual premium of ₹30,000, and you have paid premiums regularly for 5 years. Your total premiums paid would be ₹1,50,000. If the applicable surrender value factor is 50% (after 5 years) and the eligible bonus portion is ₹10,000, a rough estimate would be [web:2][web:6][web:8]:</p>
+  <p>Suppose you have a LIC policy with an annual premium of ₹30,000, and you have paid premiums regularly for 5 years. Your total premiums paid would be ₹1,50,000. If the applicable surrender value factor is 50% (after 5 years) and the eligible bonus portion is ₹10,000, a rough estimate would be:</p>
   
   <ul>
     <li>Total premiums paid: ₹1,50,000</li>
@@ -451,40 +906,45 @@ function calculateSurrenderValue(event) {
     <li><strong>Approximate surrender value: ₹85,000</strong></li>
   </ul>
 
-  <p>This is only an illustrative calculation. Actual values depend on your specific policy document and LIC's internal procedures [web:2][web:3][web:8][web:13].</p>
+  <p>This is only an illustrative calculation. Actual values depend on your specific policy document and LIC's internal procedures.</p>
 
   <h2>When Can You Surrender a LIC Policy?</h2>
-  <p>Most regular premium LIC policies become eligible for surrender only after paying premiums for a <strong>minimum of 2 to 3 full years</strong>, depending on the policy term [web:5][web:7][web:10]. Policies with terms longer than 10 years typically require at least 3 years of premium payments before any surrender value becomes available.</p>
+  <p>Most regular premium LIC policies become eligible for surrender only after paying premiums for a <strong>minimum of 2 to 3 full years</strong>, depending on the policy term. Policies with terms longer than 10 years typically require at least 3 years of premium payments before any surrender value becomes available.</p>
   
-  <p>If you attempt to surrender within the first year or two, you may receive nothing or a negligible amount compared to the premiums paid [web:5][web:7]. That's why surrendering should always be considered a last resort.</p>
+  <p>If you attempt to surrender within the first year or two, you may receive nothing or a negligible amount compared to the premiums paid. That's why surrendering should always be considered a last resort.</p>
 
   <h2>Pros and Cons of Surrendering a LIC Policy</h2>
   
-  <h3>Pros</h3>
+  <h3>✅ Pros</h3>
   <ul>
-    <li><strong>Immediate liquidity:</strong> You receive a lump sum that can help during financial emergencies or to repay high-interest debts [web:1][web:5].</li>
-    <li><strong>No future premium burden:</strong> You are no longer required to pay future premiums, which can ease your cash flow if premiums have become difficult to manage [web:1][web:5].</li>
+    <li><strong>Immediate liquidity:</strong> You receive a lump sum that can help during financial emergencies or to repay high-interest debts.</li>
+    <li><strong>No future premium burden:</strong> You are no longer required to pay future premiums, which can ease your cash flow if premiums have become difficult to manage.</li>
+    <li><strong>Flexibility:</strong> Gives you the freedom to redirect funds to other financial priorities or investments.</li>
   </ul>
 
-  <h3>Cons</h3>
+  <h3>❌ Cons</h3>
   <ul>
-    <li><strong>Loss of life insurance cover:</strong> Surrendering terminates your insurance protection, leaving your family without that specific coverage [web:1][web:5][web:7].</li>
-    <li><strong>Lower returns:</strong> The surrender value is almost always lower than the total premiums paid, especially if surrendered in the early or middle years of the policy [web:3][web:5][web:7].</li>
-    <li><strong>Reduced bonus benefits:</strong> You do not receive the full bonus amounts that would have been available at maturity [web:2][web:3][web:13].</li>
+    <li><strong>Loss of life insurance cover:</strong> Surrendering terminates your insurance protection, leaving your family without that specific coverage.</li>
+    <li><strong>Lower returns:</strong> The surrender value is almost always lower than the total premiums paid, especially if surrendered in the early or middle years of the policy.</li>
+    <li><strong>Reduced bonus benefits:</strong> You do not receive the full bonus amounts that would have been available at maturity.</li>
+    <li><strong>Tax implications:</strong> Premiums paid may have been claimed as tax deductions under Section 80C. Surrendering early may have tax consequences.</li>
   </ul>
 
   <h2>Things to Consider Before Surrendering</h2>
   <ul>
-    <li><strong>Your financial situation:</strong> If you're not under extreme pressure, it may be better to continue the policy or convert it to a paid-up policy to preserve long-term benefits [web:1][web:10].</li>
-    <li><strong>Policy loan option:</strong> Many LIC policies allow you to take a loan against the policy instead of surrendering it. This provides liquidity while keeping your insurance cover intact (subject to conditions) [web:1][web:5].</li>
-    <li><strong>Paid-up policy option:</strong> If you stop paying premiums after the minimum eligibility period, the policy can be converted to "paid-up" status, where the sum assured and benefits are reduced but the policy continues without further premium payments [web:5][web:10].</li>
+    <li><strong>Your financial situation:</strong> If you're not under extreme pressure, it may be better to continue the policy or convert it to a paid-up policy to preserve long-term benefits.</li>
+    <li><strong>Policy loan option:</strong> Many LIC policies allow you to take a loan against the policy instead of surrendering it. This provides liquidity while keeping your insurance cover intact (subject to conditions).</li>
+    <li><strong>Paid-up policy option:</strong> If you stop paying premiums after the minimum eligibility period, the policy can be converted to "paid-up" status, where the sum assured and benefits are reduced but the policy continues without further premium payments.</li>
+    <li><strong>Revival possibility:</strong> If your policy has lapsed, you may be able to revive it within a certain period (usually 2-5 years) by paying pending premiums with interest.</li>
+    <li><strong>Market conditions:</strong> Consider if current market conditions for alternative investments justify surrendering your policy.</li>
   </ul>
 
   <h2>How to Check Your LIC Surrender Value</h2>
   <ul>
-    <li><strong>Visit your nearest LIC branch:</strong> Bring your policy document and ID proof, and ask for a surrender value quotation. LIC staff can provide the exact amount and explain options like paid-up or loan [web:5][web:10].</li>
-    <li><strong>Check online via LIC portal:</strong> If you have registered on the official LIC website, you can log in and view policy details. Some policies allow you to check surrender values or submit service requests online [web:5][web:13].</li>
-    <li><strong>Use an online surrender value calculator:</strong> Third-party websites and tools (like this one) offer LIC surrender value calculators where you can enter premium, term, and years paid to get an approximate estimate. These tools provide only indicative values; exact amounts are calculated by LIC [web:3][web:8][web:13].</li>
+    <li><strong>Visit your nearest LIC branch:</strong> Bring your policy document and ID proof, and ask for a surrender value quotation. LIC staff can provide the exact amount and explain options like paid-up or loan.</li>
+    <li><strong>Check online via LIC portal:</strong> If you have registered on the official LIC website (<a href="https://www.licindia.in" target="_blank" rel="noopener">www.licindia.in</a>), you can log in and view policy details. Some policies allow you to check surrender values or submit service requests online.</li>
+    <li><strong>Contact LIC customer care:</strong> Call LIC's toll-free number or send an email inquiry with your policy number for surrender value information.</li>
+    <li><strong>Use an online surrender value calculator:</strong> Third-party websites and tools (like this one) offer LIC surrender value calculators where you can enter premium, term, and years paid to get an approximate estimate. These tools provide only indicative values; exact amounts are calculated by LIC.</li>
   </ul>
 
   <p>For more detailed calculations and information, you can also visit <a href="https://calculatordekho.com/lic-policy-surrender-value-calculator/" target="_blank" rel="noopener" class="external-link">CalculatorDekho's LIC Surrender Value Calculator →</a></p>
@@ -492,47 +952,272 @@ function calculateSurrenderValue(event) {
   <h2>Frequently Asked Questions (FAQs)</h2>
 
   <h3>1. Can I surrender my LIC policy at any time?</h3>
-  <p>You can usually surrender only after completing the minimum required premium-paying period, typically 2 or 3 full years depending on your policy. After that, surrender is allowed, but the amount you receive depends on your plan, years completed, and accrued bonuses [web:5][web:7][web:13].</p>
+  <p>You can usually surrender only after completing the minimum required premium-paying period, typically 2 or 3 full years depending on your policy. After that, surrender is allowed, but the amount you receive depends on your plan, years completed, and accrued bonuses.</p>
 
   <h3>2. Is it better to surrender or make my policy paid-up?</h3>
-  <p>Surrendering gives you an immediate lump sum but permanently ends your insurance cover and all long-term benefits. Making the policy paid-up allows you to stop paying premiums while retaining a reduced sum assured and some maturity benefits, which is often better if you don't urgently need cash [web:5][web:10].</p>
+  <p>Surrendering gives you an immediate lump sum but permanently ends your insurance cover and all long-term benefits. Making the policy paid-up allows you to stop paying premiums while retaining a reduced sum assured and some maturity benefits, which is often better if you don't urgently need cash.</p>
 
   <h3>3. What happens if I stop paying premiums without surrendering?</h3>
-  <p>If you stop paying without taking any action, the policy may lapse after the grace period ends, which usually means losing cover and benefits unless you revive it later. If you have already paid premiums for the minimum required years, the policy may automatically become eligible for paid-up or surrender value as per the product rules [web:5][web:7].</p>
+  <p>If you stop paying without taking any action, the policy may lapse after the grace period ends, which usually means losing cover and benefits unless you revive it later. If you have already paid premiums for the minimum required years, the policy may automatically become eligible for paid-up or surrender value as per the product rules.</p>
 
   <h3>4. How accurate is this calculator?</h3>
-  <p>This calculator provides an <strong>approximate estimate</strong> based on common LIC surrender value factors. Actual surrender values are calculated by LIC based on your specific policy terms, bonus rates, and internal procedures. Always verify with LIC before making any decision [web:3][web:8][web:13].</p>
+  <p>This calculator provides an <strong>approximate estimate</strong> based on common LIC surrender value factors. Actual surrender values are calculated by LIC based on your specific policy terms, bonus rates, and internal procedures. Always verify with LIC before making any decision.</p>
+
+  <h3>5. Do all LIC policies have surrender value?</h3>
+  <p>No. <strong>Term insurance plans</strong> generally do not have any surrender value as they are pure protection plans without any savings component. Only endowment, money-back, whole life, and similar plans with a savings component typically have surrender values.</p>
+
+  <h3>6. What is the difference between GSV and SSV?</h3>
+  <p><strong>GSV (Guaranteed Surrender Value)</strong> is the minimum guaranteed amount based on premiums paid. <strong>SSV (Special Surrender Value)</strong> includes bonuses and is usually higher. LIC pays whichever is greater.</p>
+
+  <h3>7. Can I get my full premium back if I surrender?</h3>
+  <p>No. Surrender value is always less than the total premiums paid, especially in the early years. To get full benefits, you should continue the policy until maturity.</p>
 
   <h2>Conclusion</h2>
-  <p>Surrendering a LIC policy should generally be viewed as a last resort, as it usually results in financial losses compared to continuing the policy until maturity or converting it to paid-up status [web:1][web:5][web:7]. Before making a decision, carefully evaluate your financial needs, explore alternatives like policy loans or paid-up options, and use tools like this LIC Surrender Value Calculator to make informed choices.</p>
+  <p>Surrendering a LIC policy should generally be viewed as a last resort, as it usually results in financial losses compared to continuing the policy until maturity or converting it to paid-up status. Before making a decision, carefully evaluate your financial needs, explore alternatives like policy loans or paid-up options, and use tools like this LIC Surrender Value Calculator to make informed choices.</p>
   
-  <p>Always confirm the final surrender value with your LIC branch or official portal to ensure you understand the exact amount and implications [web:3][web:5][web:13].</p>
+  <p>Always confirm the final surrender value with your LIC branch or official portal to ensure you understand the exact amount and implications.</p>
 
-  <p style="margin-top:24px; padding:16px; background:#eff6ff; border-radius:8px; border-left:4px solid #3b82f6;">
-    <strong>Need more calculators?</strong> Explore our partner site for other useful financial tools: <a href="https://calculatordekho.com/lic-policy-surrender-value-calculator/" target="_blank" rel="noopener" style="color:#1e40af; font-weight:600;">CalculatorDekho - LIC Surrender Value Calculator</a>
+  <p style="margin-top:30px; padding:20px; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius:12px; border-left:5px solid #3b82f6;">
+    <strong>📚 Need more financial calculators?</strong> Explore our partner site for other useful tools: <a href="https://calculatordekho.com/lic-policy-surrender-value-calculator/" target="_blank" rel="noopener" style="color:#1e40af; font-weight:700; text-decoration:none;">CalculatorDekho - LIC Surrender Value Calculator →</a>
   </p>
 </div>
 
 <footer>
-  <div style="margin-bottom:16px;">
+  <div style="margin-bottom:18px;">
     <ul>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="contact-us.html">Contact Us</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
     </ul>
   </div>
-  <div style="color:#6b7280; font-size:14px;">
+  <div style="color:#6b7280; font-size:14px; font-weight:600;">
     © 2025 LIC Surrender Value Calculator | Educational Tool | Not affiliated with LIC India
   </div>
 </footer>
 
 <!-- Floating Support Button -->
-<a href="https://calculatordekho.com/financial-calculator-dekho/" target="_blank" rel="noopener noreferrer" class="floating-bmc" aria-label="Support me on Buy Me a Coffee">
+<a href="https://buymeacoffee.com/moneytechs/?utm_source=website&utm_medium=floating_button" target="_blank" rel="noopener noreferrer" class="floating-bmc" aria-label="Support me on Buy Me a Coffee">
   <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     <path fill="currentColor" d="M3 6h14v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V6zM5 4a2 2 0 0 0-2 2v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V6a2 2 0 0 0-2-2H5zM19 7h2v2a4 4 0 0 1-4 4h-1v-2h1a2 2 0 0 0 2-2V7z"/>
   </svg>
   <span>Support Me</span>
 </a>
+
+<script>
+function formatCurrency(value) {
+  return '₹' + value.toLocaleString('en-IN', {maximumFractionDigits: 0});
+}
+
+function clearErrors() {
+  var inputs = document.querySelectorAll('.form-input, .form-select');
+  inputs.forEach(function(input) {
+    input.classList.remove('error');
+  });
+  var errors = document.querySelectorAll('.error-message');
+  errors.forEach(function(error) {
+    error.remove();
+  });
+}
+
+function showError(element, message) {
+  element.classList.add('error');
+  var errorSpan = document.createElement('span');
+  errorSpan.className = 'error-message';
+  errorSpan.textContent = message;
+  element.parentNode.appendChild(errorSpan);
+}
+
+function updatePPTNote() {
+  var policyTerm = document.getElementById('policyTerm');
+  var premiumFrequency = document.getElementById('premiumFrequency');
+  var pptNote = document.getElementById('pptNote');
+  var pptYears = document.getElementById('pptYears');
+  
+  var term = parseInt(policyTerm.value) || 0;
+  var freq = premiumFrequency.value;
+  
+  if (freq === 'single') {
+    pptNote.textContent = 'Premium Paying Term assumed to be 1 year for Single Premium';
+  } else if (term > 0) {
+    pptYears.textContent = term;
+    pptNote.innerHTML = 'Premium Paying Term assumed same as Policy Term (<span id="pptYears">' + term + '</span> years)';
+  }
+}
+
+function updateLabels() {
+  var premiumFrequency = document.getElementById('premiumFrequency');
+  var premiumLabel = document.getElementById('premiumLabel');
+  var premiumNote = document.getElementById('premiumNote');
+  var yearsPaidLabel = document.getElementById('yearsPaidLabel');
+  var yearsPaidNote = document.getElementById('yearsPaidNote');
+  var yearsPaid = document.getElementById('yearsPaid');
+  
+  var freq = premiumFrequency.value;
+  
+  if (freq === 'single') {
+    premiumLabel.textContent = '💵 Single Premium Amount (₹)';
+    premiumNote.textContent = 'Enter the total one-time premium paid';
+    yearsPaidLabel.textContent = '⏱️ Premium Paid';
+    yearsPaidNote.textContent = 'Enter 1 as premium is paid once';
+    yearsPaid.value = 1;
+    yearsPaid.setAttribute('readonly', 'readonly');
+  } else {
+    premiumLabel.textContent = '💵 Annual Premium Amount (₹)';
+    premiumNote.textContent = 'Enter the total premium amount paid per year';
+    yearsPaidLabel.textContent = '⏱️ Number of Full Premiums Paid (Years)';
+    yearsPaidNote.textContent = 'How many full years\' premiums have you paid?';
+    yearsPaid.removeAttribute('readonly');
+  }
+  updatePPTNote();
+}
+
+function calculateLICSurrender() {
+  clearErrors();
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('gsvExplanation').style.display = 'none';
+  document.getElementById('alternativesSection').style.display = 'none';
+  document.getElementById('nextSteps').style.display = 'none';
+
+  var policyName = document.getElementById('policyName');
+  var sumAssured = document.getElementById('sumAssured');
+  var policyTerm = document.getElementById('policyTerm');
+  var premiumFrequency = document.getElementById('premiumFrequency');
+  var annualPremium = document.getElementById('annualPremium');
+  var yearsPaid = document.getElementById('yearsPaid');
+
+  var isValid = true;
+  
+  if (!policyName.value) {
+    showError(policyName, 'Please select a policy');
+    isValid = false;
+  }
+  
+  var sa = parseFloat(sumAssured.value);
+  if (isNaN(sa) || sa <= 0) {
+    showError(sumAssured, 'Enter valid Sum Assured');
+    isValid = false;
+  }
+  
+  var pt = parseInt(policyTerm.value);
+  if (isNaN(pt) || pt <= 0 || pt > 50) {
+    showError(policyTerm, 'Enter valid Policy Term (1-50 years)');
+    isValid = false;
+  }
+  
+  if (!premiumFrequency.value) {
+    showError(premiumFrequency, 'Select premium mode');
+    isValid = false;
+  }
+  
+  var ap = parseFloat(annualPremium.value);
+  if (isNaN(ap) || ap <= 0) {
+    showError(annualPremium, 'Enter valid premium');
+    isValid = false;
+  }
+  
+  var yp = parseInt(yearsPaid.value);
+  if (isNaN(yp) || yp <= 0) {
+    showError(yearsPaid, 'Enter valid years');
+    isValid = false;
+  }
+  
+  if (yp > pt) {
+    showError(yearsPaid, 'Years paid cannot exceed policy term');
+    isValid = false;
+  }
+
+  if (!isValid) return;
+
+  var freq = premiumFrequency.value;
+  var effectivePPT = freq === 'single' ? 1 : pt;
+  var totalPaid = ap * yp;
+  var factor = effectivePPT > 0 ? (yp / effectivePPT) : 0;
+  var gsv = totalPaid * factor;
+  var note = 'This GSV estimate is based only on premiums paid and assumed PPT.';
+
+  if (freq !== 'single' && yp < 3) {
+    gsv = 0;
+    factor = 0;
+    note = '⚠️ Regular premium policies typically acquire surrender value only after 3 full years of premium payments. Your policy may not have any surrender value yet.';
+  } else if (freq === 'single' && yp < 1) {
+    gsv = 0;
+    factor = 0;
+    note = '⚠️ Single premium policies typically acquire surrender value after 1 year or as per policy terms.';
+  }
+
+  document.getElementById('totalPremiums').textContent = formatCurrency(totalPaid);
+  document.getElementById('pptDisplay').textContent = effectivePPT + ' Year' + (effectivePPT !== 1 ? 's' : '');
+  document.getElementById('svFactor').textContent = factor.toFixed(4);
+  document.getElementById('gsvValue').textContent = formatCurrency(gsv);
+  document.getElementById('resultNote').textContent = note;
+
+  document.getElementById('resultArea').style.display = 'block';
+  document.getElementById('gsvExplanation').style.display = 'block';
+  document.getElementById('alternativesSection').style.display = 'block';
+  document.getElementById('nextSteps').style.display = 'block';
+
+  setTimeout(function() {
+    document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 150);
+}
+
+function resetLICSurrender() {
+  clearErrors();
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('gsvExplanation').style.display = 'none';
+  document.getElementById('alternativesSection').style.display = 'none';
+  document.getElementById('nextSteps').style.display = 'none';
+  document.getElementById('licSurrenderForm').reset();
+  document.getElementById('yearsPaid').removeAttribute('readonly');
+  updateLabels();
+}
+
+function shareLICSurrender() {
+  var text = 'LIC Policy Surrender Value Calculator - Calculate your surrender value instantly';
+  var url = window.location.href;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: text,
+      text: 'Check out this free LIC Surrender Value Calculator',
+      url: url
+    }).catch(function(){
+      // Fallback for browsers that don't support share
+      copyToClipboard(url);
+    });
+  } else {
+    copyToClipboard(url);
+  }
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert('✅ Link copied to clipboard: ' + text);
+    }).catch(function() {
+      alert('📋 Copy this link: ' + text);
+    });
+  } else {
+    alert('📋 Copy this link: ' + text);
+  }
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  var policyTerm = document.getElementById('policyTerm');
+  var premiumFrequency = document.getElementById('premiumFrequency');
+  
+  if (policyTerm) {
+    policyTerm.addEventListener('input', updatePPTNote);
+  }
+  
+  if (premiumFrequency) {
+    premiumFrequency.addEventListener('change', updateLabels);
+  }
+  
+  updateLabels();
+});
+</script>
 
 </body>
 </html>
